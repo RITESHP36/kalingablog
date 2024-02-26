@@ -1,2 +1,2 @@
-export const URL=import.meta.env.VITE_URL
-export const IF=import.meta.env.VITE_IF
+export const URL="https://kalingablog-3h1l.onrender.com"
+export const IF="http://localhost:5000/images/"
