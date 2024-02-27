@@ -124,9 +124,9 @@ const PostDetails = () => {
 										#CULTURAL
 									</p>
 								)}
-								{post?.category === "Multifarious" && (
+								{post?.category === "Open" && (
 									<p className="text-lime-600 text-sm font-semibold ">
-										#MULTIFARIOUS
+										#OPENCATEGORY
 									</p>
 								)}
 							</h1>

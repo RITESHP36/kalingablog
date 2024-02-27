@@ -195,7 +195,6 @@ const EditPost = () => {
 		setSelectedCategory(cat);
 		console.log(selectedCategory);
 	};
-	// const categories = ["Historical", "Cultural", "Multifarious"];
 
 	return (
 		<div>
@@ -268,26 +267,27 @@ const EditPost = () => {
 								</div>
 							</div>
 							<div
-								className={`flex justify-center items-center relative bg-black/40 hover:bg-black/40 rounded-lg h-30  ${
-									selectedCategory === "Multifarious"
+								className={`flex justify-center items-center relative bg-black/40 hover:bg-black/40 rounded-lg h-32  ${
+									selectedCategory === "Open"
 										? "border-4 border-lime-400 "
 										: "border-4 border-white"
 								}`}
-								onClick={() => handleCategorySelect("Multifarious")}
+								onClick={() => handleCategorySelect("Open")}
 							>
 								<img
-									src="/multifarious.png"
+									src="/open.jpg"
 									alt=""
 									className="rounded-lg h-full w-full object-cover "
 								/>
 								<div
-									className={`h-full w-full absolute flex justify-center items-center bg-black/40 hover:bg-black/50 rounded-lg h-30 transition-300" ${
-										selectedCategory === "Multifarious"
+									className={`h-full w-full absolute flex flex-col justify-center items-center bg-black/40 hover:bg-black/50 rounded-lg h-30 transition-300" ${
+										selectedCategory === "Open"
 											? "text-lime-400 shadow-xl"
 											: "text-white"
 									}`}
 								>
-									<p className=" text-xl font-semibold">MULTIFARIOUS</p>
+									<p className=" text-xl font-semibold">OPEN</p>
+									<p className=" text-xl font-semibold">CATEGORY</p>
 								</div>
 							</div>
 						</div>
