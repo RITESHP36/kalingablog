@@ -20,7 +20,7 @@ const Register = () => {
 	const [error, setError] = useState(false);
 	const navigate = useNavigate();
 
-	const [isAdmin, setIsAdmin] = useState(false);
+	const [isAdmin, setIsAdmin] = useState(true);
 	const [adminPassword, setAdminPassword] = useState("");
 
 	const handleRegister = async () => {
