@@ -9,6 +9,7 @@ import Loader from "../components/Loader";
 import { UserContext } from "../context/UserContext";
 import toast from "react-hot-toast";
 
+
 const Home = () => {
 	const { search } = useLocation();
 	const [posts, setPosts] = useState([]);
@@ -83,9 +84,10 @@ const Home = () => {
 				<div className="px-8 min-h-[80vh] w-4/6">
 					{loader ? (
 						<>
-							<div className="h-screen flex justify-center items-center">
-								<Loader />
-							</div>
+						
+						<div className="h-screen flex justify-center items-center">
+						<Loader />
+						</div>
 						</>
 					) : !noResults ? (
 						posts.map((post) => (
@@ -158,7 +160,7 @@ const Home = () => {
 							Know the Categories
 						</p>
 						<div className="flex flex-col gap-4 font-poppins">
-							<Link to="/category/historical">
+							<Link to="/events/historical">
 								<div className="flex justify-center items-center relative bg-black/50 hover:bg-gradient-to-b hover:from-transparent hover:to-slate-950/50 rounded-lg h-30 shadow-md shadow-neutral-400">
 									<img
 										src="/history.jpeg"
@@ -166,13 +168,11 @@ const Home = () => {
 										className="rounded-lg h-28 w-full object-cover"
 									/>
 									<div className="h-full w-full absolute flex justify-center items-center bg-black/50 hover:bg-gradient-to-b hover:from-transparent hover:to-slate-950/50 rounded-lg h-30 transition-300">
-										<p className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-red-500 text-2xl font-semibold drop-shadow-2xl">
-											HISTORICAL
-										</p>
+										<p className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-red-500 text-2xl font-semibold drop-shadow-2xl">HISTORICAL</p>
 									</div>
 								</div>
 							</Link>
-							<Link to="/category/cultural">
+							<Link to="/events/cultural">
 								<div className="flex justify-center items-center relative bg-black/50 hover:bg-gradient-to-b hover:from-transparent hover:to-slate-950/50 rounded-lg h-30 transition-300 shadow-md shadow-neutral-400">
 									<img
 										src="/cultural.jpg"
@@ -180,26 +180,38 @@ const Home = () => {
 										className="rounded-lg h-28 w-full object-cover"
 									/>
 									<div className="h-full w-full absolute flex justify-center items-center bg-black/40 hover:bg-black/50 rounded-lg h-30 transition-300">
-										<p className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-blue-500 text-2xl font-semibold drop-shadow-2xl">
-											CULTURAL
-										</p>
+										<p className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-blue-500 text-2xl font-semibold drop-shadow-2xl">CULTURAL</p>
 									</div>
 								</div>
 							</Link>
-							<Link to="/category/open">
+							<Link to="/events/multifarious">
 								<div className="flex justify-center items-center relative bg-black/50 hover:bg-gradient-to-b hover:from-transparent hover:to-slate-950/50 rounded-lg h-30 transition-300 shadow-md shadow-neutral-400">
 									<img
-										src="/open.jpg"
+										src="/multifarious.png"
 										alt=""
 										className="rounded-lg h-28 w-full object-cover"
 									/>
 									<div className="h-full w-full absolute flex justify-center items-center bg-black/40 hover:bg-black/50 rounded-lg h-30 transition-300">
-										<p className="text-transparent bg-clip-text bg-gradient-to-br from-lime-400 to-green-500 text-2xl font-bold drop-shadow-2xl text-center">
-											OPEN CATEGORY
-										</p>
+										<p className="text-transparent bg-clip-text bg-gradient-to-br from-lime-400 to-green-500 text-2xl font-semibold drop-shadow-2xl">MULTIFARIOUS</p>
 									</div>
 								</div>
 							</Link>
+						</div>
+					</div>
+					{/* Updates section
+					add an update
+					Registration Open */}
+					<div className="mt-8 p-3 rounded-lg bg-white/10 shadow-2xl ring-2 ring-black/5 backdrop-blur-3xl">
+						<p className="text-white text-center font-semibold text-xl pb-2 shadow-2xl">
+							UPDATES
+						</p>
+						<div className="flex flex-col gap-4 font-poppins">
+							
+							<div className="flex justify-between items-center">
+								<p className="text-white font-medium">
+									- Registration Open
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

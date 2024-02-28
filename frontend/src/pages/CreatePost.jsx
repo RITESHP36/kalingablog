@@ -42,7 +42,7 @@ const CreatePost = () => {
 		fetchUserPosts();
 	}, []);
 
-	if (hasPosted && user?._id !== "65d95b56e49e83adad786352") {
+	if (hasPosted) {
 		toast.error("You have already posted a blog");
 		navigate("/myblogs/:id");
 	}
@@ -260,27 +260,26 @@ const CreatePost = () => {
 								</div>
 							</div>
 							<div
-								className={`flex justify-center items-center relative bg-black/40 hover:bg-black/40 rounded-lg h-32  ${
-									selectedCategory === "Open"
+								className={`flex justify-center items-center relative bg-black/40 hover:bg-black/40 rounded-lg h-30  ${
+									selectedCategory === "Multifarious"
 										? "border-4 border-lime-400 "
 										: "border-4 border-white"
 								}`}
-								onClick={() => handleCategorySelect("Open")}
+								onClick={() => handleCategorySelect("Multifarious")}
 							>
 								<img
-									src="/open.jpg"
+									src="/multifarious.png"
 									alt=""
 									className="rounded-lg h-full w-full object-cover "
 								/>
 								<div
-									className={`h-full w-full absolute flex flex-col justify-center items-center bg-black/40 hover:bg-black/50 rounded-lg h-30 transition-300" ${
-										selectedCategory === "Open"
+									className={`h-full w-full absolute flex justify-center items-center bg-black/40 hover:bg-black/50 rounded-lg h-30 transition-300" ${
+										selectedCategory === "Multifarious"
 											? "text-lime-400 shadow-xl"
 											: "text-white"
 									}`}
 								>
-									<p className=" text-xl font-semibold">OPEN</p>
-									<p className=" text-xl font-semibold">CATEGORY</p>
+									<p className=" text-xl font-semibold">MULTIFARIOUS</p>
 								</div>
 							</div>
 						</div>

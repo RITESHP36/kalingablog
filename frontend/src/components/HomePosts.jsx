@@ -6,7 +6,7 @@ const HomePosts = ({ post }) => {
 			{/* left */}
 			<div className="w-[35%] h-[150px] flex justify-center items-center ">
 				<img
-					src={post.introductionImage||"/bg3.png"}
+					src={post.introductionImage}
 					alt=""
 					className="h-full w-full object-cover rounded-lg"
 				/>
@@ -22,8 +22,8 @@ const HomePosts = ({ post }) => {
 				{post?.category === "Cultural" && (
 					<p className="text-cyan-600 text-xs font-semibold ">#CULTURAL</p>
 				)}
-				{post?.category === "Open" && (
-					<p className="text-lime-600 text-xs font-semibold ">#OPENCATEGORY</p>
+				{post?.category === "Multifarious" && (
+					<p className="text-lime-600 text-xs font-semibold ">#MULTIFARIOUS</p>
 				)}
 				<div className="flex mb-2 text-sm font-semibold text-neutral-300 items-center justify-between md:mb-4">
 					<p>@{post.username}</p>

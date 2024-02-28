@@ -8,7 +8,7 @@ const ProfilePosts = ({ p }) => {
 			{/* left */}
 			<div className=" h-56 pr-4  flex justify-center items-center">
 				<img
-					src={p.introductionImage||"/bg3.png"}
+					src={p.introductionImage}
 					alt=""
 					className="h-full w-full object-cover"
 				/>
@@ -24,8 +24,8 @@ const ProfilePosts = ({ p }) => {
 				{p?.category === "Cultural" && (
 					<p className="text-cyan-600 text-xs font-semibold ">#CULTURAL</p>
 				)}
-				{p?.category === "Open" && (
-					<p className="text-lime-600 text-xs font-semibold ">#OPENCATEGORY</p>
+				{p?.category === "Multifarious" && (
+					<p className="text-lime-600 text-xs font-semibold ">#MULTIFARIOUS</p>
 				)}
 				<div className="flex mb-2 text-sm font-semibold text-gray-500 items-center justify-between md:mb-4">
 					<p>@{p.username}</p>

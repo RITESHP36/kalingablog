@@ -10,8 +10,6 @@ import { UserContextProvider } from "./context/UserContext";
 import MyBlogs from "./pages/MyBlogs";
 import { Toaster } from "react-hot-toast";
 import DesktopOnlyWrapper from "./components/DesktopOnlyWrapper";
-import Category from "./pages/Category"; 
-import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
 	return (
@@ -27,7 +25,6 @@ const App = () => {
 					<Route exact path="/edit/:id" element={<EditPost />} />
 					<Route exact path="/myblogs/:id" element={<MyBlogs />} />
 					<Route exact path="/profile/:id" element={<Profile />} />
-					<Route path="/category/:cat" element={<Category />} />
 				</Routes>
 			</UserContextProvider>
 		</DesktopOnlyWrapper>
